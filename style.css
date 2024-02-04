@@ -1,40 +1,44 @@
-*{
+* {
     font-family: 'Open Sans', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    text-decoration: none ;
+    text-decoration: none;
     list-style: none;
 }
-body{
+
+body {
     background-color: var(--bg-color);
     color: var(--text-color);
 }
 
-:root{
+:root {
     --bg-color: #1f1e1e;
     --text-color: #fff;
     --main-color: rgb(211, 9, 9);
     /* rgb(250, 43, 43) */
 }
-.navbar{
+
+.navbar {
     position: -webkit-sticky;
-    position:sticky;
+    position: sticky;
     top: 0;
     display: flex;
-    justify-content: space-around  ;
+    justify-content: space-around;
     padding: 15px;
     z-index: 2;
     background-color: var(--bg-color);
 }
-.navbar ul{
+
+.navbar ul {
     column-gap: 5rem;
     display: flex;
     align-items: center;
-    
+
 }
-.logo{
+
+.logo {
     font-size: 1.3rem;
     font-weight: 600;
     color: var(--text-color);
@@ -42,19 +46,22 @@ body{
     align-items: center;
 
 }
-.logo i{
+
+.logo i {
     margin-right: 15px;
 }
-.navbar ul li a{
+
+.navbar ul li a {
     color: var(--text-color);
     font-size: 1.2rem;
     font-weight: 500;
 }
+
 .navbar ul li {
     position: relative;
 }
 
-.nav-item a::after{
+.nav-item a::after {
     content: "";
     width: 0%;
     background-color: var(--main-color);
@@ -64,79 +71,89 @@ body{
     left: 0;
     transition: 0.5s;
 }
+
 .nav-item a:hover::after,
-.nav-item .active::after
-{
+.nav-item .active::after {
     width: 100%;
-    
+
 }
-.btn{
+
+.btn {
     background-color: var(--main-color);
     color: var(--text-color);
     padding: 10px 15px;
     border-radius: 5px;
     font-size: 1.1rem;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: rgb(247, 8, 8);
 }
- .home-div{
+
+.home-div {
     position: relative;
     /* z-index: -1; */
     display: flex;
     align-items: center;
 }
-.home-div .cover{
+
+.home-div .cover {
     width: 100%;
     height: 100vh;
     /* min-height: 280px; */
     opacity: 0.6;
     object-fit: cover;
     object-position: center;
-} 
-.home-div .home-text{
+}
+
+.home-div .home-text {
     position: absolute;
-    top:150px;
+    top: 150px;
     left: 300px;
 
 }
-.home-div .home-text div{
+
+.home-div .home-text div {
     font-size: 2rem;
     font-weight: 600px;
     color: var(--text-color);
     text-transform: uppercase;
 }
-.home-div .home-text h1{
+
+.home-div .home-text h1 {
     font-size: 3rem;
     font-weight: 800px;
     color: var(--text-color);
     margin-bottom: 20px;
 }
-.play{
-  position: absolute;
-  right: 5vh;
-  bottom: 20vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.5s;
+
+.play {
+    position: absolute;
+    right: 5vh;
+    bottom: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
 }
-.play-btn{
+
+.play-btn {
     font-size: 1.5rem;
     color: var(--text-color);
     padding: 15px 20px;
-    border: 3px solid rgb(2, 3, 7,0.4);
+    border: 3px solid rgb(2, 3, 7, 0.4);
     background-color: var(--main-color);
     border-radius: 50%;
-} 
-.play:hover{
+}
+
+.play:hover {
     transform: scale(1.1);
     filter: brightness(1.1);
 }
 
 /* movie section */
 
-.movie-div p{
+.movie-div p {
     font-size: 1.5rem;
     max-width: 968px;
     margin: 10px auto 10px auto;
@@ -144,38 +161,42 @@ body{
     padding-bottom: 5px;
 
 }
-.movie-div .movie-container{
+
+.movie-div .movie-container {
     max-width: 968px;
     margin: 20px auto 20px auto;
     display: grid;
     /* grid-template-columns: auto auto auto auto; */
-    grid-template-columns: repeat(auto-fit, minmax(180px,auto));
+    grid-template-columns: repeat(auto-fit, minmax(180px, auto));
     gap: 10px;
 }
-.movie-div .movie img{
+
+.movie-div .movie img {
     width: 100%;
     max-width: 180px;
     height: 230px;
     object-fit: cover;
     border-radius: 8px;
-    filter:brightness(0.9) ;
+    filter: brightness(0.9);
     box-shadow: 1.5px 1.5px 8px #666565;
     transition: 0.5s;
-   
+
 }
+
 .movie-div .movie {
     width: 100%;
     height: 100%;
     margin: 4px;
 }
-.movie-div .movie img:hover{
+
+.movie-div .movie img:hover {
     transform: translateY(-10px);
     filter: brightness(1);
 }
 
 /* Contact Section */
 
-.contact{
+.contact {
     max-width: 968px;
     margin: 0 auto;
     display: flex;
@@ -183,26 +204,31 @@ body{
     justify-content: center;
     align-items: center;
 }
-.contact h2{
+
+.contact h2 {
     margin: 10px;
 }
-.contact .contact-form{
+
+.contact .contact-form {
     background-color: var(--text-color);
     padding: 8px;
     border-radius: 5px;
     margin: 8px;
 }
-.contact .contact-form .email{
+
+.contact .contact-form .email {
     border: none;
     padding: 5px;
     width: 300px;
     font-size: 1rem;
 }
-.contact .contact-form .email:focus{
+
+.contact .contact-form .email:focus {
     border: none;
     outline: none;
 }
-.contact .contact-form .btn{
+
+.contact .contact-form .btn {
     border: none;
     outline: none;
     font-size: 1rem;
@@ -210,18 +236,20 @@ body{
 }
 
 /* footer Section */
-.footer{
+.footer {
     width: 968px;
     margin: 10px auto;
     display: flex;
     justify-content: space-between;
 
 }
-.footer .social{
+
+.footer .social {
     display: flex;
 
 }
-.footer .social i{
+
+.footer .social i {
     font-size: 1.5rem;
     background-color: rgb(211, 9, 9);
     color: var(--text-color);
@@ -230,11 +258,13 @@ body{
     border: 1px solid var(--text-color);
     transition: 0.5s;
 }
-.footer .social i:hover{
+
+.footer .social i:hover {
     transform: scale(1.1);
-    filter: brightness(1.3);   
+    filter: brightness(1.3);
 }
-.footer-text{
+
+.footer-text {
     background-color: rgb(211, 9, 9);
     padding: 5px;
     margin-top: 30px;
@@ -242,17 +272,17 @@ body{
 }
 
 /* custom scroll bar */
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 3px;
     background-color: var(--bg-color);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: red; 
+    background: red;
     border-radius: 10px;
-  }
+}
 
-  /* Handle on hover */
+/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #f70303; 
-  }
+    background: #f70303;
+}
